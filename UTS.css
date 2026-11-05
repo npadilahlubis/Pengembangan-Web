@@ -1,0 +1,929 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background: #fff;
+    color: #51443b;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.tombol {
+    display: inline-block;
+    padding: 11px 28px;
+    border: 1px solid #b6a99c;
+    color: #51443b;
+    font-family: 'Playfair Display', serif;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.tombol:hover {
+    background: #685345;
+    color: white;
+}
+
+/* AWAL */
+.awal {
+    height: 540px;
+    position: relative;
+    color: white;
+    background:
+        linear-gradient(rgba(40, 32, 26, 0.42), rgba(40, 32, 26, 0.42)),
+        url("image/uts/claye34.png") center/cover no-repeat;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 9%;
+    position: relative;
+    z-index: 2;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 23px;
+    line-height: 0.9;
+    color: white;
+}
+
+.logo span {
+    font-size: 17px;
+}
+
+.menu {
+    display: flex;
+    gap: 30px;
+}
+
+.menu a {
+    font-size: 12px;
+    color: white;
+}
+
+.menu a:hover {
+    color: #e3cdb9;
+}
+
+.keranjang {
+    color: white;
+    font-size: 23px;
+}
+
+.awal-teks {
+    position: absolute;
+    top: 42%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    text-align: center;
+}
+
+.awal-teks h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 43px;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+
+.awal-teks p {
+    font-family: 'Playfair Display', serif;
+    font-size: 12px;
+    margin-bottom: 25px;
+}
+
+.awal .tombol {
+    color: white;
+    border-color: white;
+}
+
+.awal .tombol:hover {
+    background: white;
+    color: #51443b;
+}
+
+.awal-bawah {
+    position: absolute;
+    bottom: 28px;
+    left: 7%;
+    right: 9%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+
+/* JUDUL */
+.judul {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.judul h2,
+.tentang h2,
+.katalog h2,
+.artikel-singkat > h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 23px;
+    color: #554238;
+    margin-bottom: 10px;
+}
+
+.judul p,
+.artikel-singkat > p {
+    font-size: 12px;
+    color: #9b8d81;
+    line-height: 1.7;
+}
+
+
+/* KATEGORI */
+.kategori {
+    padding: 65px 9%;
+}
+
+.kategori-produk-keramik {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.kategori-produk img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 50% 50% 0 0;
+}
+
+.kategori-produk h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 13px;
+    margin-top: 10px;
+}
+
+.kategori-produk p {
+    font-size: 11px;
+    color: #a39487;
+    margin-top: 4px;
+}
+
+
+/* TENTANG KAMI */
+.tentang {
+    padding: 45px 9% 75px;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.tentang h2 {
+    font-size: 21px;
+    margin-bottom: 25px;
+}
+
+.keunggulan {
+    display: flex;
+    gap: 13px;
+    margin-bottom: 20px;
+}
+
+.keunggulan span {
+    border: 1px solid #c7b8a9;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    flex-shrink: 0;
+}
+
+.keunggulan h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.keunggulan p {
+    font-size: 11px;
+    line-height: 1.7;
+    color: #9b8d81;
+}
+
+.tombol-putih {
+    margin-top: 10px;
+}
+
+.kolase {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.kolase img {
+    width: 100%;
+    height: 175px;
+    object-fit: cover;
+}
+
+.kolase img.gambar-1 {
+    border-radius: 0 0 0 35px;
+}
+.kolase img.gambar-2 {
+    border-radius: 0 35px 0 0;
+}
+.kolase img.gambar-3 {
+    border-radius: 0 35px 0 0;
+}
+.kolase img.gambar-4 {
+    border-radius: 0 0 0 35px;
+}
+
+/* KATALOG DAN SIDEBAR */
+.katalog {
+    padding: 35px 9% 80px;
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 35px;
+    align-items: start;
+}
+
+/* SIDEBAR */
+.samping {
+    padding: 15px 0;
+}
+
+.samping h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 15px;
+    margin-bottom: 22px;
+}
+
+.samping ul {
+    list-style: none;
+}
+
+.samping li {
+    margin-bottom: 16px;
+}
+
+.samping li a {
+    font-size: 12px;
+    color: #8b7b6e;
+}
+
+.samping li a:hover {
+    color: #b18a6d;
+    padding-left: 5px;
+}
+
+.info-samping {
+    border-top: 1px solid #e5ded7;
+    padding-top: 20px;
+    margin-top: 30px;
+}
+
+.info-samping h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.info-samping p {
+    font-size: 11px;
+    line-height: 1.8;
+    color: #968679;
+    margin-bottom: 10px;
+}
+
+.info-samping a {
+    font-size: 11px;
+    color: #a47b5e;
+}
+
+/* ISI KATALOG */
+.isi-katalog {
+    min-width: 0;
+}
+
+.judul-katalog {
+    margin-bottom: 25px;
+}
+
+.judul-katalog h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 21px;
+    margin-bottom: 8px;
+}
+
+.judul-katalog p {
+    font-size: 11px;
+    color: #9b8d81;
+}
+
+.koleksi-keramik {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.produk-klaye {
+    border: 1px solid #e5ded7;
+    padding: 8px;
+    text-align: center;
+}
+
+.produk-klaye img {
+    width: 100%;
+    height: 155px;
+    object-fit: cover;
+}
+
+.produk-klaye h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 12px;
+    margin: 10px 0 5px;
+}
+
+.produk-klaye p {
+    font-size: 11px;
+    color: #9b806b;
+    margin-bottom: 8px;
+}
+
+/* PROMO */
+.promo {
+    padding: 45px 9%;
+    display: grid;
+    grid-template-columns: 0.8fr 1.5fr;
+    align-items: center;
+    gap: 30px;
+}
+
+.promo-teks h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+}
+
+.promo-teks h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 15px;
+    margin-bottom: 12px;
+}
+
+.promo-teks p {
+    font-size: 12px;
+    line-height: 1.8;
+    color: #968679;
+    margin-bottom: 20px;
+}
+
+.promo-gambar img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+}
+
+
+/* WORKSHOP */
+.workshop-singkat {
+    text-align: center;
+    padding: 55px 9%;
+    background: #eee8e0;
+}
+
+.workshop-singkat h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+
+.workshop-singkat p {
+    font-size: 12px;
+    margin-bottom: 20px;
+    color: #8e7e71;
+}
+
+
+/* ARTIKEL */
+.artikel-singkat {
+    padding: 65px 9%;
+}
+
+.artikel-box {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-top: 25px;
+}
+
+.artikel-box img {
+    width: 240px;
+    height: 160px;
+    object-fit: cover;
+}
+
+.artikel-box h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.artikel-box p {
+    font-size: 12px;
+    line-height: 1.8;
+    color: #8e7e71;
+    margin-bottom: 12px;
+}
+
+.artikel-box a {
+    font-size: 12px;
+    color: #a47b5e;
+}
+
+
+/* FOOTER */
+.footer {
+    padding: 60px 9% 20px;
+    background:
+        linear-gradient(rgba(48, 38, 30, 0.82), rgba(48, 38, 30, 0.88)),
+        url("image/uts/claye1.jpeg") center/cover;
+    color: white;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 35px;
+    align-items: center;
+    text-align: left;
+}
+
+.footer h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.footer h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 15px;
+    margin-bottom: 15px;
+    display:flex;
+}
+
+.footer p,
+.footer a {
+    display: block;
+    font-size: 11px;
+    line-height: 2;
+    color: #e2d7cc;
+}
+
+.tombol-footer {
+    color: white;
+    border-color: white;
+    margin-top: 15px;
+}
+
+.footer-bawah {
+    grid-column: 1 / -1;
+    text-align: center;
+    border-top: 1px solid #86786b;
+    padding-top: 20px;
+    font-size: 10px;
+    color: #d4c6b8;
+}
+
+#posesatu {
+    width: 330px;
+    height: 330px;
+    object-fit: cover;
+    background: transparent;
+    margin-left: 450px;
+}
+
+.tombol-kucing {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 10px; 
+    margin-left: 550px;
+}
+button[onclick="ngumpet()"],
+button[onclick="muncul()"] {
+    display: block;
+    border-radius: 25px; 
+    font-family: 'Playfair Display', serif;
+    padding: 10px 20px;
+    background-color: #e5ded7;
+    border: 3px dotted #554238;
+}
+
+/* BAGIAN TENTANG KAMI */
+.about-klaye {
+    padding: 30px;
+    gap: 50px;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Playfair Display', serif;
+    margin-top: 30px;
+}
+.about-klaye img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 30px;
+    flex-shrink: 0;
+}
+.story {
+    flex-direction: row;
+    gap: 50px;
+    display: flex;
+    margin-bottom: 30px;
+}
+.karakteristik {
+    flex-direction: row;
+    gap: 50px;
+    display: flex;
+    margin-bottom: 30px;
+    flex-direction: row-reverse;
+}
+.komitmen {
+    flex-direction: row;
+    gap: 50px;
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.about-teks h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    margin-bottom: 15px;
+
+}.about-teks p {
+    font-size: 12px;
+    line-height: 1.8;
+    color: #968679;
+    margin-bottom: 20px;
+}
+.karakterstik-text {
+    flex-direction: row-reverse;
+    text-align: right;
+}
+.karakteristik-list {
+    list-style: square;
+    padding-left: 18px;
+}
+
+/* BAGIAN KATALOG */
+.halaman-katalog {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+    padding: 65px 9%;
+}
+
+/* SIDEBAR */
+.sidebar-katalog {
+    width: 220px;
+    flex-shrink: 0;
+}
+
+.sidebar-katalog h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+
+.sidebar-katalog ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar-katalog li {
+    margin-bottom: 15px;
+}
+
+.sidebar-katalog a {
+    text-decoration: none;
+    color: #968679;
+    font-size: 13px;
+}
+
+/* ISI KATALOG */
+.isi-katalog {
+    flex: 1;
+    min-width: 0;
+}
+
+.judul-katalog {
+    margin-bottom: 25px;
+    margin-top: 30px;
+}
+
+.judul-katalog h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 21px;
+    margin-bottom: 8px;
+}
+
+.judul-katalog p {
+    font-size: 11px;
+    color: #9b8d81;
+}
+
+/* BINGKAI PRODUK */
+.katalog-produk {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.katalog-klaye {
+    display: block;
+    border: 1px solid #e5ded7;
+    padding: 8px;
+    text-align: center;
+    text-decoration: none;
+    color: #5c4b40;
+}
+
+.katalog-klaye img {
+    width: 100%;
+    height: 155px;
+    object-fit: cover;
+}
+
+.katalog-klaye h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 12px;
+    margin: 10px 0 5px;
+}
+
+.katalog-klaye p {
+    font-size: 11px;
+    color: #9b806b;
+    margin-bottom: 8px;
+}
+
+/* WORKSHOP */
+.kelas-workshop {
+    padding: 30px;
+    background: #eee8e0;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    align-items: center;
+}
+.workshop-klaye img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 20px;
+    flex-shrink: 0;
+    align-items: center;
+    margin:auto;
+}
+.workshop {
+    flex-direction: row;
+    gap: 50px;
+    display: flex;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+    align-items: center;
+    justify-content:center; 
+}
+.workshop-klaye {
+    flex-direction: column;
+    gap: 10px;
+    display:flex;
+    margin:auto;
+    align-items: center;
+    justify-content:space-between;
+
+}
+
+.workshop-klaye h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    margin-bottom: 10px;
+    margin-top: 20px;  
+}
+.workshop-klaye p {
+    font-size: 12px;
+    line-height: 1.8;
+    color: #968679;
+    margin-bottom: 20px;
+    justify-content: space-between;;
+    text-align: center;
+}
+.detail-workshop {
+    padding: 30px;
+    border: 2px dotted #51443b;
+    margin:20px;
+}
+.detail-workshop h3{
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 7px;
+    margin-top: 20px;
+}
+.detail-workshop p{
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+iframe{
+    width: 200px;
+    height: 200px;
+}
+.pendaftaran {
+    padding: 30px;
+    background: #eee8e0;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    align-items: center;
+    line-height: 1.5;
+    border: 1px solid #51443b;
+    margin : 50px;
+    margin-left: 110px;
+    margin-right: 110px;
+}
+.tombol-pendaftaran{
+    padding: 10px;
+    border: 1px solid #51443b;
+    border-radius: 30px;
+    margin-top: 10px;
+    display: inline-block;
+    
+}
+.tombol-pendaftaran:hover {
+    background: #51443b;
+    color: white;
+    
+}
+
+/* TIPS & INFO */
+.artikel{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    gap: 25px;
+
+}
+.artikel-satu {
+    background-color: #eee8e0;
+    padding: 30px;
+    margin: 20px;
+    width: 40%;
+    box-sizing: border-box;
+}
+.artikel-satu h2{
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    margin-bottom: 10px;
+    margin-top: 20px;  
+}
+.artikel-satu p {
+    font-size: 14px;
+    line-height: 1.8;
+    text-align: justify;
+}
+.artikel-dua {
+    background-color: #eee8e0;
+    padding: 30px;
+    margin: 20px;
+    width: 40%;
+    box-sizing: border-box;
+}
+.artikel-dua h2{
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    margin-bottom: 10px;
+    margin-top: 20px; 
+}
+.artikel-dua p{
+    font-size: 14px;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+/*FORMULIR PEMBELIAN*/
+.form-pembelian {
+    background-color: #eee8e0;
+    width: 60%;
+    margin: 60px auto;
+    padding: 40px;
+    border-radius: 8px;
+}
+
+/*FORMULIR PENDAFTARAN*/
+
+.form-pendaftaran {
+    background-color: #eee8e0;
+    width: 60%;
+    margin: 60px auto;
+    padding: 40px;
+    border-radius: 8px;
+}
+
+.judul-form {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.judul-form h1 {
+    font-family: 'Playfair Display', serif;
+    color: #665343;
+    margin-bottom: 12px;
+}
+
+.judul-form p {
+    color: #666;
+    line-height: 1.7;
+}
+
+.form-workshop {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-workshop label {
+    margin-bottom: 8px;
+    margin-top: 15px;
+    color: #665343;
+    font-weight: bold;
+}
+
+.form-workshop input,
+.form-workshop select,
+.form-workshop textarea {
+    padding: 12px;
+    border: 1px solid #c9bbaa;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 14px;
+    background-color: white;
+}
+
+.form-workshop input:focus,
+.form-workshop select:focus,
+.form-workshop textarea:focus {
+    outline: none;
+    border-color: #80664f;
+}
+
+.form-workshop button {
+    margin-top: 25px;
+    padding: 14px;
+    background-color: #80664f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.form-workshop button:hover {
+    background-color: #665343;
+}
+
+hr {
+    border: none;
+    border-top: 5px dashed #51443b;
+}
+
+/*KONTAK*/
+.kontak {
+    border: 5px solid #e5ded7;
+    background-color: #51443b;
+    color:#e5ded7;
+    padding: 30px;
+    margin-left: 90px;
+    margin-right: 90px;
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+.kontak h2{
+    text-decoration: underline;
+}
